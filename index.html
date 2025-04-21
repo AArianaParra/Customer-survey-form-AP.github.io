@@ -3,40 +3,44 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="Customer-survey-form.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
+    <header>
     <h1 id="title">Customer feedback survey</h1>
     <p id="description">Thank you in advance for letting us know your opinion</p>
+    </header>
     <form method="post" action='https://register-demo.freecodecamp.org' id="survey-form" name="survey-form">
-    <!--Personal data -->
-    <fieldset>
-      <label for="name" id="name-label">Name<input id="name" name="name" type="text" class="input-text" placeholder="Type your name" required></label>
-      <label for="email" id="email-label">Email<input id="email" name="email" type="email" class="input-text" placeholder="Type your email" required></label>
-      <label for="number" id="number-label">Age<input id="number" name="number" type="number" min="13" max="120" class="input-text" placeholder="Type your age"required></label>
-      <label for="referrer">How did you find us?
-        <select id="dropdown" name="referrer" class="input-text" required>
+    <!--1st fieldset Personal data -->
+    <fieldset id="personal-data">
+      <label for="name" id="name-label" class="first-fs-label" >Name<input id="name" name="name" type="text" class="input-text input-1st-fs" placeholder="Type your name" required></label>
+      <label for="email" id="email-label" class="first-fs-label">Email<input id="email" name="email" type="email" class="input-text input-1st-fs" placeholder="Type your email" required></label>
+      <label for="number" id="number-label" class="first-fs-label">Age<input id="number" name="age" type="number" min="13" max="120" class="input-text input-1st-fs" placeholder="Type your age" required></label>
+      <label for="referrer" id="referrer-label" class="block-label">How did you find us? </label>
+        <select id="dropdown" name="referrer" class="input-text 1st-fieldset" required>
           <option value="">(Select one)</option>
           <option value="Google">Google</option>
           <option value="Youtube">Youtube</option>
           <option value="Instagram">Instagram</option>
           <option "Other">Other</option>
         </select>
-      </label>
-      <label id="other" for="other">If case you selected "Other", please especify:<input id="other" name="other" type="text" class="input-text"></label>
+     
+      <label id="other-label" for="other" class="block-label">If case you selected "Other", please especify:</label><input id="other" name="other" type="text" class="input-text 1st-fieldset">
     </fieldset>
 
-    <!-- Survey -->
-    <fieldset>
+    <!-- 2nd fieldset Feedback -->
+    <fieldset id="feedback">
       <!-- Radio -->
-      <label>In a scale of 1 to 5, how much are you satisfied with our products?</label>
-      <label class="radio" for="satisfaction">1<input id="1" type="radio" name="satisfaction" value="1" checked></label>
-         <label class="radio" for="satisfaction">2<input id="2" type="radio" name="satisfaction" value="2" ></label>
-         <label class="radio" for="satisfaction">3<input id="3" type="radio" name="satisfaction" value="3"></label>
-         <label class="radio" for="satisfaction">4<input id="4" type="radio" name="satisfaction" value="4"></label>
-         <label class="radio" for="satisfaction">5<input id="5" type="radio" name="satisfaction" value="5"></label>
+      <label class="block-label">In a scale of 1 to 5, how much are you satisfied with our products?</label>
+      <div id="radio-wrapper">
+      <label class="radio-label" for="satisfaction">1<input id="1" type="radio" name="satisfaction" value="1" checked class="radio"></label>
+         <label class="radio-label" for="satisfaction">2<input id="2" type="radio" name="satisfaction" value="2" class="radio"></label>
+         <label class="radio-label" for="satisfaction">3<input id="3" type="radio" name="satisfaction" value="3" class="radio"></label>
+         <label class="radio-label" for="satisfaction">4<input id="4" type="radio" name="satisfaction" value="4" class="radio"></label>
+         <label class="radio-label" for="satisfaction">5<input id="5" type="radio" name="satisfaction" value="5" class="radio"></label>
+         </div>
          <!-- Favorite product -->
-         <label for="fav-product">What's your favorite product?
+         <label for="fav-product" class="block-label">What's your favorite product?</label>
            <select id="dropdown" name="dropdown" class="input-text">
              <option value="shampoo" >Shampoo</option>
              <option value="conditioner">Conditioner</option>
@@ -44,18 +48,20 @@
              <option value="deodorant">Deodorant</option>
              <option value="soap">Soap</option>
              </select>
-           </label>
-           <label>What product would you like to see improved?<i><small>check all that apply</small></i></label>
-           <label for="c-shampoo">Shampoo<input id="c-shampoo" name="c-shampoo" type="checkbox" value="shampoo"></label>
-           <label for="c-conditioner">Conditioner<input id="c-conditioner" name="c-conditioner" type="checkbox" value="conditioner"></label>
-           <label for="c-body-scrub">Body scrub<input id="c-body-scrub" name="c-body-scrub" type="checkbox" value="body-scrub"></label>
-           <label for="c-deodorant">Deodorant<input id="c-deodorant" name="c-deodorant" type="checkbox" value="deodorant"></label>
-           <label for="c-soap">Soap<input id="c-soap" name="c-soap" type="checkbox" value="soap" ></label>
+           
+           <label class="block-label">What product would you like to see improved?<i><small>check all that apply</small></i></label>
+          <div id="check-wrapper">
+           <label for="c-shampoo" class="check-label"><input id="c-shampoo" name="c-shampoo" type="checkbox" value="shampoo">Shampoo</label>
+           <label for="c-conditioner" class="check-label"><input id="c-conditioner" name="c-conditioner" type="checkbox" value="conditioner">Conditioner</label>
+           <label for="c-body-scrub" class="check-label"><input id="c-body-scrub" name="c-body-scrub" type="checkbox" value="body-scrub">Body scrub</label>
+           <label for="c-deodorant"class="check-label"><input id="c-deodorant" name="c-deodorant" type="checkbox" value="deodorant">Deodorant</label>
+           <label for="c-soap" class="check-label"><input id="c-soap" name="c-soap" type="checkbox" value="soap" >Soap</label>
+           </div>
     </fieldset> 
 
     <!-- Further info -->
     <fieldset>
-      <label for="comments" id="comments">Any comments or suggestions?<textarea name="comments" rows="4" cols="40" placeholder="I consider..." class="input-text"></textarea></label>
+      <label for="comments" id="comments-label" class="block-label">Any comments or suggestions?<textarea id="comments" name="comments" rows="5" cols="40" placeholder="I consider..." class="input-text"></textarea></label>
     </fieldset>
     <fieldset>
       <input id="submit" type="submit" value="Submit">

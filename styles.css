@@ -1,0 +1,202 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+ background: radial-gradient(rgba(151, 117, 210, 0.877),rgba(112, 53, 212, 0.877) );
+  font-family: ui-serif, Tahoma;
+  font-weight: 500;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vh;
+  margin: 5vh auto 2vh auto;  
+}
+
+h1 {
+   font-size: 2rem;
+   color: rgb(58, 55, 55);
+   max-width: 700px;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: rgba(201, 195, 195, 0.59);
+   box-shadow: 5px 5px;
+}
+
+form {
+  background: radial-gradient(rgba(43, 12, 97, 0.877),rgba(92, 28, 202, 0.877) );
+  width: 80%;
+  max-width: 700px;
+  min-width: 300px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+fieldset {
+  width: 90%;
+  border: none;
+  border-top: 3px solid rgba(219, 214, 214, 0.5);
+  margin: 20px auto;
+  padding-top: 20px; /*To have the same distance up and down the top of each fieldset*/
+  display: flex;
+  flex-direction: column;
+  row-gap:4vh;
+  justify-items: center;
+}
+
+/* --- 1st fieldset----*/
+
+.first-fs-label {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  height: 40px;
+  margin-left: 11%;
+}
+
+#name, #email, #number {
+  width: 60%; 
+  height: 100%;
+}
+
+#number {
+width: 40%;
+}
+
+#dropdown, #other {
+  height: 40px;
+  width: 70%;
+}
+
+/* --- 2nd fieldset----*/
+#radio-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.radio-label {
+    width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+}
+
+#check-wrapper {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.check-label {
+  width: 90%;
+  display: flex;
+}
+
+.check-label input {
+  margin: auto 20px auto 30%;
+  width: 20px;
+  height: 20px;
+}
+
+/* --- 3rd fieldset----*/
+#comments {
+  margin: 20px auto -10px auto;
+  width: 80%;
+  height: 80px;
+  font-size: 0.8rem;
+}
+
+/*----------Aesthetic issues from form*/
+
+input, select, textarea {
+    border-radius: 4px;
+  border: 1.5px solid rgba(0,0,0, 0.5) ; 
+}
+
+input, select, option  {
+  color: rgb(65, 62, 62);
+  font-size: 1rem;
+}
+
+textarea {
+   color: rgb(65, 62, 62);
+}
+
+input:not([class="radio"]), input:not([type="checkbox"]), textarea, select {
+  box-shadow:  1px 1px 5px 2px rgb(146, 145, 145);
+  /*box-shadow: white offset-x offset-y blur-radius spread-radius*/ 
+}
+
+/*input:not([class="radio"]), input:not([type="checkbox"]) does not work, soo...*/
+input[type="radio"] {
+   box-shadow: 0 0 0 0 ;
+}
+
+/*Submit----------*/
+
+input[type="submit"] {
+  display: block;
+  margin: 15px  auto 30px auto;
+  height: 1.7em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 150px;
+  padding: 5px;
+  background-color: rgb(209, 153, 209);
+  box-shadow: 3px 3px 0 2px rgb(221, 218, 218);
+}
+
+input[type="submit"]:hover {
+  box-shadow:  3px 3px 0 2px rgb(209, 153, 209);
+  background-color:rgb(221, 218, 218);
+  cursor: pointer;
+}
+
+/*____________MEDIA___________*/
+
+@media only screen and (max-width: 700px) {
+
+html {
+  font-size: 18px;
+  }
+
+body {
+  background-color: pink;
+  width: 85%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+  
+html {
+  font-size: 16px;
+  }
+
+form {
+  width: 90%;
+}
+
+} 
