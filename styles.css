@@ -98,11 +98,6 @@ width: 40%;
   align-items: center;
 }
 
-.radio {
-  width: 20px;
-  height: 20px;
-}
-
 #check-wrapper {
     width: 100%;
   display: flex;
@@ -197,6 +192,18 @@ html {
 
 form {
   width: 90%;
+}
+
+.first-fs-label {
+  margin-left: 9%;
+}
+
+.radio-label {
+  column-gap: 5px;
+}
+
+.check-label input {
+  margin: auto 20px auto 27%;
 }
 
 } 
